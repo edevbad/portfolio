@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+.w-full{
+    width: 100%;
+    height: 100%;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -9999;
+  }
+.main{
+    /* background-color: black; */
+    background-color: rgb(13, 13, 13);
+
+}
+.hero{
+    height: 100vh;
+    margin: auto;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 20px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+a{
+    text-decoration: none;
+
+}
+.about{
+    display: flex;
+    padding: 100px 110px;
+    gap: 60px;
+}
+.about-text{
+    width: 40vw;
+}
+.about-text h3{
+    margin: 5px 0;
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 20px;
+}
+.about-text h1{
+    font-size: 50px;
+}
+.about-socials a{
+    border-radius: 5px;
+    font-size: 40px;
+    padding: 7px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-socials{
+    margin-top: 25px;
+    display: flex;
+    gap: 5px;
+}
+
+.about-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.about-img img{
+    width: 349px;
+    transform: translateY(-27px);
+}
+h1,h3{
+    font-family: 'Inter',sans-serif;
+}
+
+.skills{
+    padding: 30px;
+    height: 100vh;
+  }
+.skills-icons{
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+     display: grid;
+     grid-template-columns: repeat(1,minmax(0,1fr));
+     margin-top: 20px;
+   
+}
+.chip{
+    background-color: rgb(26 26 26);
+    display: flex;
+    gap: 1.25rem;;
+    padding: 0.625rem;
+    border-color: rgb(26 26 26/1);
+    border-width: 0.5px;
+    border-radius: 0.75rem;
+    height: 75px;
+    border:1px solid rgb(26 26 26);
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .2s;
+}
+.chip:hover{
+    background-color: rgb(38 38 38/1);
+   border : 0.5px solid #535353;
+}
+.chip-img{
+    padding: 0.75rem;
+    background-color: rgba(97,218,251,.2);
+    border-radius: 0.5rem;
+    width: fit-content;
+    
+}
+.chip h4{
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.chip p{
+    color: hsla(0,0%,100%,.7);
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+@media (min-width: 1024px){
+.skills-icons{
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+}
+
+
+
+@media (min-width: 640px){
+.skills-icons{
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+}
+  

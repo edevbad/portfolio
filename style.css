@@ -1,0 +1,257 @@
+*{
+    font-family: "General Sans";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+}
+.bounding{
+width: fit-content;
+overflow: hidden;
+}
+.boundingelemdown{
+transform: translateY(100%);
+}
+.boundingelemup{
+    transform: translateY(-100%);
+    }
+.minicircle{
+    pointer-events: none;
+    height: 10px;
+    background: white;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+}
+.hero{
+    height: 100vh;
+    position: relative;
+}
+.hero .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 15px;
+}
+.hero .headings{
+    text-transform: uppercase;
+    padding: 25px;
+    line-height: 1;
+    letter-spacing: 1.5px;
+}
+.hero .headings h1{
+    opacity: 0.7;
+}
+.hero .headings .designer{
+    padding-left: 115px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.hero .headings .designer h5{
+    text-align: right;
+    font-size: 16px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+
+}
+
+.hero .headings h1{
+    font-size: 10vw;
+}
+.hero .chotiHeading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 2vw;
+    padding: 0 20px;
+    padding-top: 80px;
+}
+.herofooter{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding:  20px;
+    gap: 180px;
+    
+
+}
+.herofooter a{
+    text-decoration: none;
+    width: 220px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.circles{
+    display: flex;
+    gap: 2px;
+    margin-left: 150px;
+}
+
+.secondPage{
+    height: 195vh;
+    padding-top: 45px;
+}
+
+.elements{
+    padding: 80px 30px;
+    padding-right: 80px;
+    text-transform: uppercase;
+}
+.elem{
+    position: relative;
+    border-top: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    cursor: pointer;
+}
+.elem img{
+    position: absolute;
+    pointer-events: none; 
+    height: 140%;
+    z-index: 99;
+    opacity: 0;
+    transition: all  0.15s;
+}
+.elem h1{
+    font-size: 6.5vw;
+    opacity: 0.7;
+    letter-spacing: 1.5px;
+}
+
+.elem:hover h5 {
+    opacity: 0.3;
+    transition: all 1s;
+
+}
+.elem:hover h1{
+    opacity: 0.3;
+
+    transform: translateX(40px);
+    transition: all 1s;
+}
+.lastelem{
+    border-bottom: 1px solid grey;
+    margin-bottom: 40px;
+}
+.btn{
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.logos{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    height: 25vh;
+ 
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+.logos-slide{
+    padding: 40px 0;
+    display: inline-block;
+    animation: slide 30s infinite  linear ;
+}
+.logos-slide img{
+    height: 60px;
+    margin: 0 60px;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.forth{
+    height: 100vh;
+}
+.about{
+    margin-top: 28vh;
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.aboutimg {
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutimg img{
+    width: 225px;
+    height: 225px;
+}
+.abouttext p{
+    width: 47vw;
+    margin: 10px 0;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+.abouttext h4{
+    opacity: 0.7;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.subscribe{
+padding: 25px;
+margin-top: 130px;
+
+}
+.subscribe h4{
+    opacity: 0.7;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+.subscribe h3{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.lastfooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    font-weight: bold;
+    margin-top: 80px;
+}
+.lastfooter .time ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+.footnav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.footnav ul a{
+    text-decoration: none;
+}
