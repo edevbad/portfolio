@@ -27,6 +27,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+#preloader {
+  color: #0d0d0d;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: var(--muted); /* your loader bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 9999;
+  transition: transform 1s ease;
+}
+
+/* Slide up + fade */
+#preloader.slide-up {
+  transform: translateY(-100%);
+}
+
+.loader{
+ background-color: #d8d8d8;
+ height: 2px;
+ width: 100px;
+
+}
+.bar{
+  background-color: #0d0d0d;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ;
+}
+
+body.no-scroll { overflow: hidden; }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -37,8 +75,11 @@ a {
   width: fit-content;
   overflow: hidden;
 }
-.boundingElem {
+.boundingElem-up {
   transform: translateY(-100%);
+}
+.boundingElem-down {
+  transform: translateY(100%);
 }
 .boundingSocials {
   transform: translateX(-100%);
@@ -78,10 +119,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 20px 26px;
-  position: sticky;
+  position: fixed;
+  top: 0;
   z-index: 99;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-  transform: translateY(-100%);
 }
 
 nav a.brand {
@@ -232,10 +273,10 @@ nav ul li a:hover::after {
 /* HERO / ABOUT */
 .hero {
   position: relative;
-  min-height: 82vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .about {
@@ -473,19 +514,61 @@ nav ul li a:hover::after {
   margin: 15px 0;
   display: flex;
   gap: 1vw;
+  width: 45%;
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+/* Pause when hovered */
+.tech-stack:hover .tech-stack-inner {
+  animation-play-state: paused;
+}
+
+.tech-stack-inner {
+  display: flex;
+  animation: slide 15s linear infinite;
+}
+/* Gradient fade edges */
+.tech-stack::before,
+.tech-stack::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;   /* adjust fade width */
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-stack::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg)  0%, transparent 100%);
+}
+
+.tech-stack::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
 }
 
 .chips {
+  flex: 0 0 auto;
+  margin: 0 10px;
    display: flex;
   align-items: center;
   justify-content: center;
-  width: 9vw;
-  height: 9vw;
-  max-width: 40px;
-  max-height: 40px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   padding: 7px;
   transition: transform 0.5s ease;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Adjust depending on number of chips */
+  }
 }
 .chips img{
   height: 100%;
@@ -743,7 +826,9 @@ i:hover {
   nav ul {
     display: none;
   }
-
+.bounding{
+    display: block;
+  }
   .nav-menu-btn {
     display: flex;
     align-items: center;
@@ -752,9 +837,12 @@ i:hover {
   .nav-menu.active{
     top: 0;
   }
-
+  
   .hero{
-    height: 90vh;
+    height: 105dvh;
+  }
+  .tech-stack{
+    width: 80%;
   }
 
   .about {

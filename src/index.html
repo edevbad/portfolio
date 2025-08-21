@@ -23,20 +23,32 @@
     <title>Ebad Khan | Full-Stack Developer</title>
   </head>
 
-  <body>
+  <body class="no-scroll">
     <div id="minicircle">view</div>
+    <!-- Preloader -->
+  <div id="preloader">
+    <p class="load-name">Ebad</p>
+    <div class="loader">
+      <div class="bar"></div>
+    </div>
+    <p class="load-percentage">0%</p>
+  </div>
     <div class="main" data-scroll-container>
       <nav>
-        <a href="#hero" class="brand" data-scroll-to> Ebad </a>
-        <ul>
+      <div class="bounding">
+        <a href="#hero" class="brand boundingElem-down" data-scroll-to> Ebad </a>
+        </div>
+        <div class="bounding">
+        <ul class="boundingElem-down">
           <li><a href="#hero" data-scroll-to>About me</a></li>
           <li><a href="#skills" data-scroll-to>Skills</a></li>
           <li><a href="#projects" data-scroll-to>Projects</a></li>
           <li><a href="#education" data-scroll-to>Education</a></li>
         </ul>
-        <div class="nav-menu-btn">
-        <div class="menu-text">MENU </div>
-        <div class="menu-cross">+</div>
+        </div>
+        <div class="bounding nav-menu-btn">
+        <div class="menu-text boundingElem-down">MENU </div>
+        <div class="menu-cross boundingElem-down">+</div>
         </div>
       </nav>
       <div class="nav-menu">
@@ -63,15 +75,15 @@
           </div>
           <div class="about-text">
             <div class="bounding">
-              <h3 class="boundingElem">
+              <h3 class="boundingElem-up">
                 Hi I am Ebad! <span>(UnderGraduate Student)</span>
               </h3>
             </div>
             <div class="bounding">
-              <h1 class="boundingElem">A Full-Stack Web Developer</h1>
+              <h1 class="boundingElem-up">A Full-Stack Web Developer</h1>
             </div>
             <div class="location bounding">
-              <h3 class="boundingElem">
+              <h3 class="boundingElem-up">
                 <i class="ri-map-pin-line"></i> Abbottabad, Pakistan
               </h3>
             </div>
@@ -197,13 +209,22 @@
       <div class="project-content">
         <h3>PopLynk</h3>
         <p>A modern URL shortener built with the MERN stack and analytics support.</p>
-        <div class="tech-stack">
-          <span class="chips"><img src="../newicons/mongodb.svg" alt=""></span>
-          <span class="chips"><img src="../newicons/express-js.png" alt=""></span>
-          <span class="chips"><img src="../newicons/react.svg" alt=""></span>
-          <span class="chips"><img src="../newicons/node-js.svg" alt=""></span>
-          <span class="chips"><img src="../newicons/tailwind.svg" alt=""></span>
-        </div>
+       <div class="tech-stack">
+  <div class="tech-stack-inner">
+    <span class="chips"><img src="../newicons/mongodb.svg" alt=""></span>
+    <span class="chips"><img src="../newicons/express-js.png" alt=""></span>
+    <span class="chips"><img src="../newicons/react.svg" alt=""></span>
+    <span class="chips"><img src="../newicons/node-js.svg" alt=""></span>
+    <span class="chips"><img src="../newicons/tailwind.svg" alt=""></span>
+
+    <!-- Duplicate for seamless loop -->
+    <span class="chips"><img src="../newicons/mongodb.svg" alt=""></span>
+    <span class="chips"><img src="../newicons/express-js.png" alt=""></span>
+    <span class="chips"><img src="../newicons/react.svg" alt=""></span>
+    <span class="chips"><img src="../newicons/node-js.svg" alt=""></span>
+    <span class="chips"><img src="../newicons/tailwind.svg" alt=""></span>
+  </div>
+</div>
         <a href="https://poplynk.onrender.com" target="_blank" class="view-btn">View Project</a>
       </div>
     </div>
@@ -293,13 +314,13 @@
       </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./script.js"></script>
   </body>
