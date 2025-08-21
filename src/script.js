@@ -41,7 +41,6 @@ setTimeout(() => {
   scroll.update();
 }, 300);
 
-
   // Always refresh after setup
 ScrollTrigger.addEventListener("refresh", () => scroll.update());
 ScrollTrigger.refresh();
@@ -97,12 +96,23 @@ function page1Anim() {
 function menu() {
 const menuBtn = document.querySelector(".nav-menu-btn");
 const navMenu = document.querySelector(".nav-menu");
-const menuCross = document.querySelector(".menu-cross");
+const closeBtn = document.querySelector(".close-btn");
 
 menuBtn.addEventListener("click", () => {
   navMenu.classList.toggle("active");
-  menuCross.classList.toggle("active");
 });
+
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+let li = document.querySelectorAll(".nav-menu-list li")
+li.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    navMenu.classList.toggle("active")
+  })
+})
+
 
 }
 
@@ -123,54 +133,54 @@ function mouseFollower() {
   });
 }
 
-function elements() {
-  let minicircle = document.querySelector("#minicircle");
+// function elements() {
+//   let minicircle = document.querySelector("#minicircle");
 
-  const elems = document.querySelectorAll(".elem");
+//   const elems = document.querySelectorAll(".elem");
 
-  elems.forEach((elem, index) => {
-    const img = elem.querySelector(".hover-img");
-    let rotate = 0;
-    let diffX = 0;
+//   elems.forEach((elem, index) => {
+//     const img = elem.querySelector(".hover-img");
+//     let rotate = 0;
+//     let diffX = 0;
 
-    elem.addEventListener("mousemove", (e) => {
-      const rect = elem.getBoundingClientRect();
-      const relX = mouseX - rect.left;
-      const relY = mouseY - rect.top;
+//     elem.addEventListener("mousemove", (e) => {
+//       const rect = elem.getBoundingClientRect();
+//       const relX = mouseX - rect.left;
+//       const relY = mouseY - rect.top;
 
-      const imgWidth = img.offsetWidth;
-      const imgHeight = img.offsetHeight;
+//       const imgWidth = img.offsetWidth;
+//       const imgHeight = img.offsetHeight;
 
-      diffX = mouseX - rotate;
-      rotate = mouseX;
+//       diffX = mouseX - rotate;
+//       rotate = mouseX;
 
-      gsap.to(img, {
-        opacity: 1,
-        ease: Power1.easeOut,
-        duration: 0.2,
-        top: relY - imgHeight / 2,
-        left: relX - imgWidth / 2,
-        rotate: gsap.utils.clamp(-20, 20, diffX * 0.5),
-      });
+//       gsap.to(img, {
+//         opacity: 1,
+//         ease: Power1.easeOut,
+//         duration: 0.2,
+//         top: relY - imgHeight / 2,
+//         left: relX - imgWidth / 2,
+//         rotate: gsap.utils.clamp(-20, 20, diffX * 0.5),
+//       });
 
-      minicircle.innerHTML = `<a href = "${hrefs[index]}">view</a>`;
+//       minicircle.innerHTML = `<a href = "${hrefs[index]}">view</a>`;
 
-      minicircle.style.color = "black";
-      minicircle.style.transform = "scale(1)";
-    });
+//       minicircle.style.color = "black";
+//       minicircle.style.transform = "scale(1)";
+//     });
 
-    elem.addEventListener("mouseleave", () => {
+//     elem.addEventListener("mouseleave", () => {
 
-      minicircle.style.color = "white";
-      minicircle.style.transform = "scale(0.2)";
-      gsap.to(img, {
-        opacity: 0,
-        duration: 0.3,
-      });
-    });
-  });
-}
+//       minicircle.style.color = "white";
+//       minicircle.style.transform = "scale(0.2)";
+//       gsap.to(img, {
+//         opacity: 0,
+//         duration: 0.3,
+//       });
+//     });
+//   });
+// }
 menu();
 page1Anim();
 mouseFollower();
-elements();
+// elements();

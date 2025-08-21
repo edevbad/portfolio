@@ -40,14 +40,23 @@
         </div>
       </nav>
       <div class="nav-menu">
-        <ul>
-          <li><a href="#hero" data-scroll-to>About me</a></li>
+        <ul class="nav-menu-nav">
+          <a href="#hero" class="brand" data-scroll-to> Ebad </a>
+          <div class="close-btn">CLOSE</div>
+        </ul>
+        <ul class="nav-menu-list">
+          <li><a href="#hero" data-scroll-to>Home</a></li>
           <li><a href="#skills" data-scroll-to>Skills</a></li>
           <li><a href="#projects" data-scroll-to>Projects</a></li>
           <li><a href="#education" data-scroll-to>Education</a></li>
       </ul>
+      <ul class="nav-menu-footer">
+        <li><a href="https://www.linkedin.com/in/ebad-khan-4a3ba5377/">LINKEDIN</a></li>
+        <li><a href="https://github.com/edevbad">GITHUB</a></li>
+        <li><a href="mailto:ebadk205@gmail.com">GMAIL</a></li>
+      </ul>
     </div>
-      <div class="hero" id="hero" data-scroll-section>
+          <div class="hero" id="hero" data-scroll-section>
         <div class="about">
           <div class="about-img">
             <img src="../images/IMG_5104.jpg" alt="Profile picture of Ebad" />
@@ -109,7 +118,7 @@
         <div class="skills-icons">
           <div class="chip">
             <div>
-              <img src="/newicons/react.svg" alt="React logo" />
+              <img src="../newicons/react.svg" alt="React logo" />
             </div>
             <div>
               <h4>React</h4>
@@ -119,7 +128,7 @@
 
           <div class="chip">
             <div>
-              <img src="/newicons/tailwind.svg" alt="Tailwind logo" />
+              <img src="../newicons/tailwind.svg" alt="Tailwind logo" />
             </div>
             <div>
               <h4>Tailwind</h4>
@@ -138,7 +147,7 @@
 
           <div class="chip">
             <div>
-              <img src="/newicons/node-js.svg" alt="NodeJS logo" />
+              <img src="../newicons/node-js.svg" alt="NodeJS logo" />
             </div>
             <div>
               <h4>NodeJS</h4>
@@ -148,7 +157,7 @@
 
           <div class="chip">
             <div>
-              <img src="/newicons/express-js.png" alt="ExpressJS logo" />
+              <img src="../newicons/express-js.png" alt="ExpressJS logo" />
             </div>
             <div>
               <h4>ExpressJS</h4>
@@ -158,7 +167,7 @@
 
           <div class="chip">
             <div>
-              <img src="/newicons/mongodb.svg" alt="MongoDB logo" />
+              <img src="../newicons/mongodb.svg" alt="MongoDB logo" />
             </div>
             <div>
               <h4>MongoDB</h4>
@@ -168,7 +177,7 @@
 
           <div class="chip mysql">
             <div>
-              <img src="/newicons/MySQL-Logo.wine.png" alt="MySQL logo" />
+              <img src="../newicons/MySQL-Logo.wine.png" alt="MySQL logo" />
             </div>
             <div>
               <h4>MySQL</h4>
@@ -178,7 +187,31 @@
         </div>
       </div>
 
-      <div class="projects" id="projects" data-scroll-section>
+
+     <section class="projects" id="projects" data-scroll-section>
+  <h2>Projects</h2>
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3>PopLynk</h3>
+        <p>A modern URL shortener built with the MERN stack and analytics support.</p>
+        <div class="tech-stack">
+          <span class="chips"><img src="../newicons/mongodb.svg" alt=""></span>
+          <span class="chips"><img src="../newicons/express-js.png" alt=""></span>
+          <span class="chips"><img src="../newicons/react.svg" alt=""></span>
+          <span class="chips"><img src="../newicons/node-js.svg" alt=""></span>
+          <span class="chips"><img src="../newicons/tailwind.svg" alt=""></span>
+        </div>
+        <a href="https://poplynk.onrender.com" target="_blank" class="view-btn">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <!-- <div class="projects" id="projects" data-scroll-section>
         <h1>Projects</h1>
         <div class="elements">
           <a target="_blank" href="https://poplynk.onrender.com/">
@@ -215,38 +248,9 @@
             </div>
           </div>
         </a>
-        </div>
-
-        <!-- <div class="cards">
-        <div class="card">
-          <div class="card-img">
-            <img src="../images/image.png" alt="">
-          </div>
-          <div class="card-text">
-            <h4>PopLynk</h4>
-            <h5>URL Shortner</h5>
-          </div> 
-           <div class="technologies">
-            <div class="technologies-chip">
-              <img src="../newicons/node-js.svg" alt="" width="100%">
-            </div>
-            <div class="technologies-chip">
-              <img src="../newicons/express-js.png" alt="" width="100%">
-            </div>
-            <div class="technologies-chip">
-              <img src="../newicons/mongodb.svg" alt="" width="40%">
-            </div>
-            <div class="technologies-chip">
-              <img src="../newicons/react.svg" alt="" width="100%">
-            </div>
-            <div class="technologies-chip">
-              <img src="../newicons/tailwind.svg" alt="" width="100%">
-            </div>
-            <button class="view-btn">View</button>
-          </div> 
         </div> -->
-        <!-- </div> -->
-      </div>
+
+      <!-- </div> -->
 
       <!-- <div class="timeline-section" data-scroll-section>
         <h1>Experience</h1>
