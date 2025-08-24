@@ -2,7 +2,7 @@
 
 ![Portfolio Screenshot](./screenshot.png) <!-- replace with actual screenshot path -->
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://edevbad.github.io/portfolio/src/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://edevbad.github.io/portfolio/)
 ---
 ---
 
