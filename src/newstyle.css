@@ -13,7 +13,6 @@
 
 html,
 body {
-  background-color: #1a1a1a;
   height: 100%;
   cursor: url("../cursor/arrowhead-rounded-outline.svg") 8 8, auto;
 }
@@ -298,8 +297,8 @@ nav ul li a:hover::after {
 }
 
 .about-img img {
-  width: 400px;
-  transform: translateY(-27px);
+  width: 100%;
+  object-fit: cover;
   max-width: 120%;
   transition: scale 0.5s ease;
 }
