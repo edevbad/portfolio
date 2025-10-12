@@ -114,6 +114,7 @@ img {
 nav {
   background-color: var(--bg);
   width: 100%;
+  max-width : 1400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
