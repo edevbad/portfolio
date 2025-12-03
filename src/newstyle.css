@@ -298,9 +298,10 @@ nav ul li a:hover::after {
 }
 
 .about-img img {
-  width: 100%;
+  width: 160%;
   object-fit: cover;
-  max-width: 120%;
+  transform: translateY(-340px);
+  max-width: 200%;
   transition: scale 0.5s ease;
 }
 @keyframes float {
@@ -478,7 +479,7 @@ nav ul li a:hover::after {
   text-align: left;
 }
 
-.project-card:hover .project-content {
+.project-content:hover  {
   transform: translateX(20px);
 }
 
