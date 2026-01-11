@@ -136,6 +136,7 @@ nav ul {
   display: flex;
   gap: 32px;
   list-style: none;
+  font-size: small;
 }
 
 nav ul li a {
@@ -747,7 +748,7 @@ nav ul li a:hover::after {
   padding: 1vw 2vw;
   border-top: 1px solid rgba(255, 255, 255, 0.02);
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 
 .footer p {
